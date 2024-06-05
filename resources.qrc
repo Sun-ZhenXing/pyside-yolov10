@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>assets/FluentAlert24Regular.svg</file>
+        <file>assets/FluentApps24Regular.svg</file>
+        <file>assets/FluentDelete24Regular.svg</file>
+        <file>assets/FluentDismiss24Regular.svg</file>
+        <file>assets/FluentDismissCircle24Regular.svg</file>
+        <file>assets/FluentFolder24Regular.svg</file>
+        <file>assets/FluentPauseCircle24Regular.svg</file>
+        <file>assets/FluentPlayCircle24Regular.svg</file>
+        <file>assets/FluentRecordStop24Regular.svg</file>
+        <file>assets/FluentSave24Regular.svg</file>
+        <file>assets/FluentWrenchScrewdriver24Regular.svg</file>
+        <file>assets/LogosQt.svg</file>
+    </qresource>
+</RCC>

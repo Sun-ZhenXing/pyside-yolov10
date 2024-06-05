@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "pyside-yolo-ui"
+version = "0.1.0"
+description = "YOLOv10 UI based on PySide6"
+authors = ["Alex Sun <1006925066@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+pyside6 = "^6.7.1"
+typing-extensions = "^4.12.1"
+numpy = "^1.26.4"
+opencv-python = "^4.10.0.82"
+onnxruntime-gpu = "^1.18.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.7"
+isort = "^5.13.2"
+black = "^24.4.2"
+pre-commit = "^3.7.1"
+nuitka = "^2.3"
+ultralytics = "^8.2.28"
+torch = { url = "https://download.pytorch.org/whl/cu121/torch-2.2.1%2Bcu121-cp310-cp310-win_amd64.whl" }
+torchvision = { url = "https://download.pytorch.org/whl/cu121/torchvision-0.17.1%2Bcu121-cp310-cp310-win_amd64.whl" }
+torchaudio = { url = "https://download.pytorch.org/whl/cu121/torchaudio-2.2.1%2Bcu121-cp310-cp310-win_amd64.whl" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
