@@ -26,6 +26,7 @@ torchaudio = { url = "https://download.pytorch.org/whl/cu121/torchaudio-2.2.1%2B
 ipykernel = "^6.29.4"
 wandb = "^0.17.0"
 tensorboard = "^2.16.2"
+dill = "^0.3.8"
 
 [build-system]
 requires = ["poetry-core"]

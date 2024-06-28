@@ -52,8 +52,7 @@ class MainWindow(QMainWindow):
     @Slot()
     def openPicture(self) -> None:
         """打开图片"""
-        self._video.release()
-        self._video = cv2.VideoCapture(0)
+        self.closeVideo()
         file_name, _ = QFileDialog.getOpenFileName(
             self, "打开图片", ".", "图片文件 (*.jpg *.png)"
         )

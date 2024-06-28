@@ -2,7 +2,7 @@ import numpy as np
 from ultralytics import YOLO
 from ultralytics.models.yolo.detect.predict import Results
 
-model = YOLO("models/yolov8m.pt")
+model = YOLO("models/yolov10m.pt")
 
 
 def predict(img: np.ndarray):
