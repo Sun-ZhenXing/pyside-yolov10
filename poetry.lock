@@ -813,13 +813,13 @@ test = ["flaky", "ipyparallel", "pre-commit", "pytest (>=7.0)", "pytest-asyncio 
 
 [[package]]
 name = "ipython"
-version = "8.25.0"
+version = "8.26.0"
 description = "IPython: Productive Interactive Computing"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "ipython-8.25.0-py3-none-any.whl", hash = "sha256:53eee7ad44df903a06655871cbab66d156a051fd86f3ec6750470ac9604ac1ab"},
-    {file = "ipython-8.25.0.tar.gz", hash = "sha256:c6ed726a140b6e725b911528f80439c534fac915246af3efc39440a6b0f9d716"},
+    {file = "ipython-8.26.0-py3-none-any.whl", hash = "sha256:e6b347c27bdf9c32ee9d31ae85defc525755a1869f14057e900675b9e8d6e6ff"},
+    {file = "ipython-8.26.0.tar.gz", hash = "sha256:1cec0fbba8404af13facebe83d04436a7434c7400e59f47acf467c64abd0956c"},
 ]
 
 [package.dependencies]
@@ -846,7 +846,7 @@ nbformat = ["nbformat"]
 notebook = ["ipywidgets", "notebook"]
 parallel = ["ipyparallel"]
 qtconsole = ["qtconsole"]
-test = ["pickleshare", "pytest", "pytest-asyncio (<0.22)", "testpath"]
+test = ["packaging", "pickleshare", "pytest", "pytest-asyncio (<0.22)", "testpath"]
 test-extra = ["curio", "ipython[test]", "matplotlib (!=3.2.0)", "nbformat", "numpy (>=1.23)", "pandas", "trio"]
 
 [[package]]
@@ -2729,18 +2729,18 @@ files = [
 
 [[package]]
 name = "ultralytics"
-version = "8.2.45"
+version = "8.2.46"
 description = "Ultralytics YOLOv8 for SOTA object detection, multi-object tracking, instance segmentation, pose estimation and image classification."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "ultralytics-8.2.45-py3-none-any.whl", hash = "sha256:71eaf151355fb42fda38e1878fd84a51ad00220a7d3b9a5a120c2c3a98789aab"},
-    {file = "ultralytics-8.2.45.tar.gz", hash = "sha256:30e072aca93267249fda7b92633f1b1945ad6648488b9730287f1cd49267aaf5"},
+    {file = "ultralytics-8.2.46-py3-none-any.whl", hash = "sha256:9c6315e7c5e35bc2cf57825e4c49704e95e86b3edff2d79642297c04e36aece6"},
+    {file = "ultralytics-8.2.46.tar.gz", hash = "sha256:2b61aecee70489bca737faed7f8064607ef92d9335dc3155f8780e22447b9c68"},
 ]
 
 [package.dependencies]
 matplotlib = ">=3.3.0"
-numpy = ">=1.23.5,<2.0.0"
+numpy = ">=1.23.0,<2.0.0"
 opencv-python = ">=4.6.0"
 pandas = ">=1.1.4"
 pillow = ">=7.1.2"
