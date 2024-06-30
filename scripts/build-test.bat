@@ -10,7 +10,7 @@ python -m nuitka --standalone --mingw64 ^
     --windows-icon-from-ico=yolo_ui\resources\icon.ico ^
     --python-flag=no_docstrings,no_asserts ^
     --assume-yes-for-downloads ^
-    --enable-console ^
+    --windows-console-mode=force ^
     main.py
 
 :EOF

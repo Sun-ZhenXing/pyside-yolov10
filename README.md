@@ -1,10 +1,25 @@
-# pyside-yolo-ui
+# YOLOv10 & PySide
 
-## 1. 开始
+使用 PySide6 构建 UI，部署 ONNX YOLOv10 模型，可轻量化打包，使用 ONNXRuntime 推理。
 
-推荐环境：
+## 特征
 
-- Python 3.10+
+本项目为 YOLOv10 参考项目，提供了 训练、推理、导出和 ONNX 模型的部署示例。
+
+更多：
+
+- [x] [YOLOv8 OBB：训练旋转框检测](./notebook/obb.ipynb)
+- [x] 提供 ONNX 推理示例
+- [ ] 提供 OBB 的 ONNX 推理示例
+- [ ] 支持更多平台，包括 MacOS 和 Ubuntu
+- [ ] 文档：训练、推理、模型导出
+- [ ] 文档：打包部署
+
+参考了 [X-AnyLabeling: `export_yolov10_onnx.py`](https://github.com/CVHub520/X-AnyLabeling/blob/main/tools/export_yolov10_onnx.py) 的实现。
+
+## 开始
+
+推荐环境：Python 3.10
 
 创建虚拟环境：
 
@@ -71,32 +86,21 @@ black .
 pre-commit run --all-files
 ```
 
-## 2. 构建可执行程序
+## 构建可执行程序
 
-使用 Nuitka 编译 Python 代码：
-
-```bash
-python -m nuitka --standalone --mingw64 ^
-    --plugin-enable=pyside6 ^
-    --output-dir=dist ^
-    --python-flag=no_docstrings,no_asserts ^
-    --assume-yes-for-downloads ^
-    main.py
-```
-
-## 3. 说明
-
-先检查你的 PyTorch 是否支持 CUDA 推理：
+使用 Nuitka 编译 Python 代码，Windows 打包：
 
 ```bash
-python -c "print(__import__('torch').cuda.is_available())"
-pip list | grep torch
+set UPX_PATH=...
+scripts\build.bat
 ```
 
-如果你的返回结果是 `True` 和以 `cu121` 等结尾的版本号，那么你的 PyTorch 支持 CUDA 推理。
-
-训练：
+Windows 测试打包：
 
 ```bash
-yolo detect train data=data/logo.yaml model=yolov10m.pt epochs=100 imgsz=640 batch=-1 seed=20242024
+scripts\build-test.bat
 ```
+
+## 协议
+
+[AGPLv3](./LICENSE).

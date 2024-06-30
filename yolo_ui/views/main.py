@@ -45,6 +45,10 @@ class MainWindow(QMainWindow):
         )
         self._ui.image_label.setPixmap(QPixmap.fromImage(image))
 
+    def clear_frame(self):
+        """清空帧"""
+        self._ui.image_label.clear()
+
     def __del__(self):
         """释放摄像头"""
         self._video.release()
@@ -68,6 +72,7 @@ class MainWindow(QMainWindow):
     @Slot()
     def openVideo(self) -> None:
         """打开视频"""
+        self.closeVideo()
         file_name, _ = QFileDialog.getOpenFileName(
             self, "打开视频", ".", "视频文件 (*.mp4 *.avi)"
         )
@@ -81,6 +86,7 @@ class MainWindow(QMainWindow):
         """关闭视频"""
         self._timer.stop()
         self._video.release()
+        self.clear_frame()
         self._video = cv2.VideoCapture(0)
 
     @Slot()
