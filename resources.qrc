@@ -11,6 +11,7 @@
         <file>assets/FluentRecordStop24Regular.svg</file>
         <file>assets/FluentSave24Regular.svg</file>
         <file>assets/FluentWrenchScrewdriver24Regular.svg</file>
+        <file>assets/icon.ico</file>
         <file>assets/LogosQt.svg</file>
     </qresource>
 </RCC>
