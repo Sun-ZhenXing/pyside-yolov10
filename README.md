@@ -11,9 +11,9 @@
 - [x] [YOLOv8 OBB：训练旋转框检测](./notebook/obb.ipynb)
 - [x] 提供 ONNX 推理示例
 - [ ] 提供 OBB 的 ONNX 推理示例
-- [ ] 支持更多平台，包括 MacOS 和 Ubuntu
+- [x] 支持更多平台，包括 Mac OS 和 Ubuntu
 - [ ] 文档：训练、推理、模型导出
-- [ ] 文档：打包部署
+- [x] 文档：打包部署
 
 参考了 [X-AnyLabeling: `export_yolov10_onnx.py`](https://github.com/CVHub520/X-AnyLabeling/blob/main/tools/export_yolov10_onnx.py) 的实现。
 
@@ -84,6 +84,14 @@ black .
 
 ```bash
 pre-commit run --all-files
+```
+
+## 导出模型
+
+导出 ONNX 模型：
+
+```bash
+yolo export model=/root/runs/detect/train/weights/best.pt format=onnx simplify=True imgsz=1280 opset=12
 ```
 
 ## 构建可执行程序
