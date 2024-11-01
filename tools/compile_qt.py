@@ -2,7 +2,7 @@ import os
 import subprocess
 from pathlib import Path
 
-BASE_DIR = "yolo_ui/"
+BASE_DIR = "app/"
 UI_FILE_DIR = f"{BASE_DIR}widgets"
 RESOURCE_FILE = "resources.qrc"
 RESOURCE_DIR = "assets"

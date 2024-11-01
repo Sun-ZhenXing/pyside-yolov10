@@ -1,4 +1,4 @@
-# YOLOv10 & PySide
+# YOLO & PySide
 
 使用 PySide6 构建 UI，部署 ONNX YOLOv10 模型，可轻量化打包，使用 ONNXRuntime 推理。
 
@@ -19,52 +19,22 @@
 
 ## 开始
 
-推荐环境：Python 3.10
-
-创建虚拟环境：
+推荐环境：Python 3.11
 
 ```bash
-python -m venv venv
+uv sync
 ```
-
-激活虚拟环境：
-
-```bash
-# Windows
-venv\Scripts\activate
-# Linux / MacOS
-source venv/bin/activate
-```
-
-> [!TIP]
-> 如果没有安装 `pipx` 先安装 `pipx`：
->
-> ```bash
-> pip install pipx
-> ```
->
-> 本项目使用 Poetry 管理，推荐使用 VS Code 开发，如果没有安装 Poetry，请先安装：
->
-> ```bash
-> pipx install poetry
-> ```
 
 下面的操作请在虚拟环境下工作，安装依赖：
 
 ```bash
-poetry install --no-root
-```
-
-安装 Git 钩子：
-
-```bash
-pre-commit install
+just i
 ```
 
 运行：
 
 ```bash
-python main.py
+just dev
 ```
 
 格式化：

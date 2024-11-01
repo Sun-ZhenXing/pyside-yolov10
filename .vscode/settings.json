@@ -1,13 +1,32 @@
 {
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.importFormat": "absolute",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
-        },
-    },
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.importFormat": "absolute",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "never",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "isort.args": [
+    "--profile",
+    "black"
+  ],
+  "files.eol": "\n",
+  "cSpell.words": [
+    "imread",
+    "ndarray",
+    "ONNX",
+    "onnxruntime",
+    "Pixmap",
+    "postprocess",
+    "pyproject",
+    "pyside",
+    "ultralytics",
+    "YOLO",
+    "yolov"
+  ],
 }

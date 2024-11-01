@@ -3,8 +3,8 @@ import sys
 from PySide6.QtCore import QProcess
 from PySide6.QtWidgets import QApplication
 
-from yolo_ui.config import GlobalConfig
-from yolo_ui.views.main import MainWindow
+from app.config import GlobalConfig
+from app.views.main import MainWindow
 
 
 def main():

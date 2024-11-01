@@ -4,8 +4,8 @@ from PySide6.QtCore import QTimer, Slot
 from PySide6.QtGui import QImage, QPixmap
 from PySide6.QtWidgets import QFileDialog, QMainWindow, QMessageBox, QWidget
 
-from yolo_ui.utils.predict import predict
-from yolo_ui.widgets.main_ui import Ui_MainWindow
+from app.utils.predict import predict
+from app.widgets.main_ui import Ui_MainWindow
 
 
 class MainWindow(QMainWindow):
@@ -32,9 +32,9 @@ class MainWindow(QMainWindow):
         ret, frame = self._video.read()
         frame, *_ = predict(frame)
         if ret:
-            self.dispaly_frame(frame)
+            self.display_frame(frame)
 
-    def dispaly_frame(self, frame: np.ndarray):
+    def display_frame(self, frame: np.ndarray):
         """渲染帧"""
         image = QImage(
             frame.data,
@@ -67,7 +67,7 @@ class MainWindow(QMainWindow):
             if height > 1280 or width > 720:
                 ratio = min(1280 / height, 720 / width)
                 frame = cv2.resize(frame, (int(width * ratio), int(height * ratio)))
-            self.dispaly_frame(frame)
+            self.display_frame(frame)
 
     @Slot()
     def openVideo(self) -> None:

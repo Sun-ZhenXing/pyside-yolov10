@@ -1,7 +1,7 @@
 {
-    "recommendations": [
-        "ms-python.python",
-        "ms-python.isort",
-        "ms-python.black-formatter"
-    ]
+  "recommendations": [
+    "ms-python.python",
+    "charliermarsh.ruff",
+    "fill-labs.dependi"
+  ]
 }

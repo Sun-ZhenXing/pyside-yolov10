@@ -2,6 +2,8 @@
 *.pt
 runs/
 wandb/
+temp/
+temp.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 from onnxruntime import InferenceSession
 
-from yolo_ui.utils.yolov10 import postprocess, preprocess
+from app.utils.yolov10 import postprocess, preprocess
 
 DEFAULT_PROVIDERS = ["CUDAExecutionProvider", "CPUExecutionProvider"]
 DEFAULT_INPUT_SHAPE = (1280, 1280)
@@ -24,7 +24,7 @@ class OnnxModel(ABC):
         )
 
     @abstractmethod
-    def predict(self, *args, **kwargs) -> None:
+    def predict(self, *args, **kwargs) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
         """Make predictions using the model."""
 
 

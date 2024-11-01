@@ -1,33 +1,35 @@
-[tool.poetry]
-name = "pyside-yolo-ui"
+[project]
+name = "pyside-yolov10"
 version = "0.1.0"
-description = "YOLOv10 UI based on PySide6"
-authors = ["Alex Sun <1006925066@qq.com>"]
+description = "Add your description here"
 readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26.4",
+    "onnxruntime-gpu>=1.19.2",
+    "opencv-python>=4.10.0.84",
+    "pyside6>=6.8.0.2",
+    "torch==2.5.1+cu121",
+    "torchaudio==2.5.1+cu121",
+    "torchvision==0.20.1+cu121",
+    "typing-extensions>=4.12.2",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.10,<3.12"
-pyside6 = "^6.7.1"
-typing-extensions = "^4.12.1"
-numpy = "^1.26.4"
-opencv-python = "^4.10.0.82"
-onnxruntime-gpu = "^1.18.0"
-
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.4.7"
-isort = "^5.13.2"
-black = "^24.4.2"
-pre-commit = "^3.7.1"
-nuitka = "^2.3"
-ultralytics = "^8.2.28"
-torch = { url = "https://download.pytorch.org/whl/cu121/torch-2.2.1%2Bcu121-cp310-cp310-win_amd64.whl" }
-torchvision = { url = "https://download.pytorch.org/whl/cu121/torchvision-0.17.1%2Bcu121-cp310-cp310-win_amd64.whl" }
-torchaudio = { url = "https://download.pytorch.org/whl/cu121/torchaudio-2.2.1%2Bcu121-cp310-cp310-win_amd64.whl" }
-ipykernel = "^6.29.4"
-wandb = "^0.17.0"
-tensorboard = "^2.16.2"
-dill = "^0.3.8"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+index-strategy = "unsafe-best-match"
+index-url = "https://pypi.org/simple"
+extra-index-url = [
+    "https://pypi.org/simple",
+    "https://download.pytorch.org/whl/cu121",
+]
+dev-dependencies = [
+    "dill>=0.3.9",
+    "ipykernel>=6.29.5",
+    "nuitka>=2.4.11",
+    "pre-commit>=4.0.1",
+    "ruff>=0.7.1",
+    "rust-just>=1.36.0",
+    "tensorboard>=2.18.0",
+    "ultralytics>=8.3.25",
+    "wandb>=0.18.5",
+]
